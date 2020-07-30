@@ -5,7 +5,7 @@ html {
     height: 100%;
     width: 100%;
     /* background-color: palegreen; */
-    background: url('../images/login_bg.jpg') no-repeat center;
+    background: url('../images/login_bg.jpg') no-repeat center top;
     background-size: cover;
 }
 
@@ -24,4 +24,32 @@ html {
     width: 100%;
     height: 60px;
     background: url(../images/login_title.png) no-repeat center;
+}
+
+.reg-box {
+    display: none;
+}
+
+.layui-form {
+    padding: 0 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.layui-input {
+    padding-left: 32px;
 }
