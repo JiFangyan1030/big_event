@@ -31,16 +31,16 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token') || ""
         // },
         // 在baseAPI中统一使用complete函数,complete函数无论执行成功或者失败都会执行
-        // success: function (res) {
-        //     // token可能24小时就失效;所以需要重新登录
-        //     // console.log(res)
-        //     if (res.status !== 0) {
-        //         return layui.layer.msg('获取用户信息失败')
-        //     }
-        //     // 调用renderAvatar渲染用户头像
-        //     console.log(res)
-        //     renderAvatar(res.data)
-        // }
+        success: function (res) {
+            // token可能24小时就失效;所以需要重新登录
+            // console.log(res)
+            if (res.status !== 0) {
+                return layui.layer.msg('获取用户信息失败')
+            }
+            // 调用renderAvatar渲染用户头像
+            console.log(res)
+            renderAvatar(res.data)
+        }
         // complete: function (res) {
         //     console.log(res)
         //     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败!') {
