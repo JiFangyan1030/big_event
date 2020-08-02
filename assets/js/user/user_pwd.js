@@ -4,7 +4,7 @@ $(function () {
     // 利用 form 对象,创建规则
     form.verify({
         // 自定义pwd的校验规则
-        pwd: [/^\S{6,12}$/, "密码为6-12位,不能包含空格"],
+        pwd: [/^\S{6,12}$/, "密码为6-12位,不能包含空格哦"],
         // 校验新旧密码校验
         samepwd: function (value) {
             // console.log($('[name=oldPwd]').val())
