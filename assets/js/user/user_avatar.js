@@ -59,7 +59,7 @@ $(function () {
                     return layui.layer.msg('res.message')
                 }
                 layui.layer.msg('头像上传成功')
-                // 刷新父框架中的个人资料
+                // 刷新父框架中的个人资料信息
                 window.parent.getUserInfo();
             }
         })
