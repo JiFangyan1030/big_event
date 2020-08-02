@@ -17,7 +17,7 @@ $.ajaxPrefilter(function (options) {
     // complete函数就是无论成功或是是否都会调用这个函数
 
     options.complete = function (res) {
-        console.log(res)
+        // console.log(res)
         // console.log(res.responseJSON.status)
         // console.log(res.responseJSON.message)
         if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
