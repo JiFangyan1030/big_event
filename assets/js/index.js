@@ -21,6 +21,7 @@ $(function () {
     })
 })
 
+// 必须是全局的,后面user_info.js要用
 function getUserInfo() {
     $.ajax({
         method: "GET",
@@ -38,7 +39,7 @@ function getUserInfo() {
                 return layui.layer.msg('获取用户信息失败')
             }
             // 调用renderAvatar渲染用户头像
-            console.log(res)
+            // console.log(res)
             renderAvatar(res.data)
         }
         // complete: function (res) {
@@ -58,7 +59,7 @@ function renderAvatar(user) {
     // 1.渲染用户名
     var uname = user.nickname || user.username;
     $('#welcome').html('欢迎&nbsp;&nbsp;' + uname)
-    console.log(uname[0])
+    // console.log(uname[0])
     // 渲染用户头像
     // 判断,用户头像信息.有就渲染图片.没有就渲染文字
     if (user.user_pic !== null) {
