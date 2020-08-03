@@ -15,47 +15,43 @@
     <div class="layui-card">
         <div class="layui-card-header">修改用户信息</div>
         <div class="layui-card-body">
-            <<<<<<< HEAD 卡片式面板面板通常用于非白色背景色的主体内<br>
-                从而映衬出边框投影
+
+            <form class="layui-form" action="" style="width: 500px;" lay-filter="formUserInfo">
+                <!-- 存储id属性 -->
+                <input type="hidden" name="id" id="">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">登录名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="username" required lay-verify="required" placeholder="请输入登录名称"
+                            autocomplete="off" class="layui-input" readonly>
+                    </div>
+                </div>
+                <!-- 用户昵称 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户昵称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="nickname" required lay-verify="required|nickname" placeholder="请输入用户昵称"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 用户邮箱 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" required lay-verify="required|email" placeholder="请输入用户邮箱"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 提交重置 -->
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">提交修改</button>
+                        <button type="reset" class="layui-btn layui-btn-primary" id="btnReset">重置</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
-    =======
-    <form class="layui-form" action="" style="width: 500px;" lay-filter="formUserInfo">
-        <!-- 存储id属性 -->
-        <input type="hidden" name="id" id="">
-        <!-- 用户名 -->
-        <div class="layui-form-item">
-            <label class="layui-form-label">登录名称</label>
-            <div class="layui-input-block">
-                <input type="text" name="username" required lay-verify="required" placeholder="请输入登录名称"
-                    autocomplete="off" class="layui-input" readonly>
-            </div>
-        </div>
-        <!-- 用户昵称 -->
-        <div class="layui-form-item">
-            <label class="layui-form-label">用户昵称</label>
-            <div class="layui-input-block">
-                <input type="text" name="nickname" required lay-verify="required|nickname" placeholder="请输入用户昵称"
-                    autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <!-- 用户邮箱 -->
-        <div class="layui-form-item">
-            <label class="layui-form-label">用户邮箱</label>
-            <div class="layui-input-block">
-                <input type="text" name="email" required lay-verify="required|email" placeholder="请输入用户邮箱"
-                    autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <!-- 提交重置 -->
-        <div class="layui-form-item">
-            <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="formDemo">提交修改</button>
-                <button type="reset" class="layui-btn layui-btn-primary" id="btnReset">重置</button>
-            </div>
-        </div>
-    </form>
-    </div>
     </div>
     <!-- 导入layui页面需要的js(优先引入) -->
     <script src="/assets/lib/layui/layui.all.js"></script>
@@ -65,7 +61,7 @@
     <script src="/assets/js/baseAPI.js"></script>
     <!-- 引入页面独有的js文件 -->
     <script src="/assets/js/user/user_info.js"></script>
-    >>>>>>> user
+
 </body>
 
 </html>
